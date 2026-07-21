@@ -654,7 +654,6 @@ html {
     .slide-active img {
     width: 100%;
     height: auto;            /* Tinggi menyesuaikan proporsi asli foto */
-    max-height: 300px;       /* Membatasi tinggi maksimal agar tidak kegedean */
     object-fit: contain;     /* KUNCI: Menampilkan seluruh gambar tanpa terpotong */
     border-radius: 12px;
     border: 3px solid white;
