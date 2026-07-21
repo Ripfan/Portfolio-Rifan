@@ -515,3 +515,144 @@ html {
     border: none;
     padding: 0;
 }
+
+/* ===================================================
+   RESPONSIVE DESIGN FOR MOBILE (LAYAR HP & TABLET)
+   =================================================== */
+
+@media (max-width: 768px) {
+
+    /* --- 1. HEADER & NAVBAR --- */
+    header {
+        flex-direction: column; /* Susun logo dan navbar vertikal */
+        padding: 15px 20px;
+        gap: 15px;
+        position: relative; /* Agar tidak menutupi bagian hero di HP */
+    }
+
+    .navbar {
+        padding: 10px 20px;
+        gap: 15px;
+        flex-wrap: wrap; /* Jika menu tidak muat, bisa lanjut ke bawahnya */
+        justify-content: center;
+    }
+
+    .navbar a {
+        font-size: 13px;
+    }
+
+    /* --- 2. HERO SECTION --- */
+    .hero-section {
+        min-height: auto;
+        padding: 40px 20px 60px 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 60px; /* Ukuran proporsional untuk layar HP */
+        letter-spacing: 2px;
+    }
+
+    .hero-section h2 {
+        font-size: 18px;
+        letter-spacing: 4px;
+        margin-bottom: 30px;
+    }
+
+    .btn-profil {
+        font-size: 18px;
+        padding: 12px 40px;
+    }
+
+    /* --- 3. PROFIL SECTION --- */
+    .profil-section {
+        padding: 20px;
+        margin-top: 0;
+        min-height: auto;
+    }
+
+    .profil-card {
+        padding: 25px 20px;
+    }
+
+    .title-profil-card {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .profil-content {
+        flex-direction: column; /* Foto di atas, Teks deskripsi di bawah */
+        text-align: center;
+        gap: 20px;
+    }
+
+    .profil-desc {
+        text-align: left; /* Tetap rapi dibaca */
+    }
+
+    .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
+    }
+
+    /* --- 4. SOFTWARE SKILLS --- */
+    .skills-section {
+        padding: 40px 20px;
+    }
+
+    .title-skills {
+        font-size: 50px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Jadi 1 kolom memanjang ke bawah di HP */
+    }
+
+    /* --- 5. PROJECT SECTION --- */
+    .project-section {
+        padding: 40px 20px;
+    }
+
+    .title-project {
+        font-size: 50px;
+    }
+
+    .project-card {
+        width: 100%; /* Memenuhi lebar container HP */
+        max-width: 320px;
+    }
+
+    /* --- 6. MODAL & SLIDER --- */
+    .modal-content {
+        width: 92%;
+        margin: 15% auto;
+    }
+
+    .modal-content h2 {
+        font-size: 35px;
+    }
+
+    .close-btn {
+        top: 15px;
+        left: 20px;
+        font-size: 35px;
+    }
+
+    .slider-container {
+        gap: 10px; /* Mengecilkan jarak tombol panah slider */
+    }
+
+    .prev, .next {
+        font-size: 30px;
+    }
+
+    .slide-active img {
+        height: 200px; /* Menyesuaikan tinggi gambar slider di HP */
+    }
+
+    .project-info-box {
+        width: 100%;
+        padding: 15px;
+        margin-top: 10px;
+    }
+}
