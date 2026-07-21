@@ -530,16 +530,16 @@ html {
 
     /* --- 1. HEADER & NAVBAR --- */
     header {
-        flex-direction: column; /* Susun logo dan navbar vertikal */
+        position: relative; /* Agar tidak menutupi tulisan Hero di HP */
+        flex-direction: column;
         padding: 15px 20px;
         gap: 15px;
-        position: relative; /* Agar tidak menutupi bagian hero di HP */
     }
 
     .navbar {
         padding: 10px 20px;
         gap: 15px;
-        flex-wrap: wrap; /* Jika menu tidak muat, bisa lanjut ke bawahnya */
+        flex-wrap: wrap;
         justify-content: center;
     }
 
@@ -554,13 +554,13 @@ html {
     }
 
     .hero-section h1 {
-        font-size: 60px; /* Ukuran proporsional untuk layar HP */
+        font-size: 60px !important; /* Perkecil dari 250px */
         letter-spacing: 2px;
     }
 
     .hero-section h2 {
         font-size: 18px;
-        letter-spacing: 4px;
+        letter-spacing: 3px;
         margin-bottom: 30px;
     }
 
@@ -586,19 +586,24 @@ html {
     }
 
     .profil-content {
-        flex-direction: column; /* Foto di atas, Teks deskripsi di bawah */
+        flex-direction: column; /* Foto di atas, deskripsi di bawah */
         text-align: center;
         gap: 20px;
     }
 
+    .profil-img-large {
+        width: 180px;
+        height: 180px;
+    }
+
     .profil-desc {
-        text-align: left; /* Tetap rapi dibaca */
+        text-align: justify;
     }
 
     .contact-info {
         flex-direction: column;
-        align-items: flex-start;
-        padding-left: 10px;
+        align-items: center;
+        gap: 12px;
     }
 
     /* --- 4. SOFTWARE SKILLS --- */
@@ -611,54 +616,60 @@ html {
     }
 
     .skills-grid {
-        grid-template-columns: 1fr; /* Jadi 1 kolom memanjang ke bawah di HP */
+        grid-template-columns: 1fr; /* Jadi 1 kolom memanjang di HP */
     }
 
-    /* --- 5. PROJECT SECTION --- */
-    .project-section {
-        padding: 40px 20px;
-    }
-
-    .title-project {
-        font-size: 50px;
-    }
-
-    .project-card {
-        width: 100%; /* Memenuhi lebar container HP */
-        max-width: 320px;
-    }
-
-    /* --- 6. MODAL & SLIDER --- */
+    /* --- 5. FIX MODAL / POPUP PROJECT (YANG ANEH SAAT DIKLIK) --- */
     .modal-content {
         width: 92%;
         margin: 15% auto;
     }
 
     .modal-content h2 {
-        font-size: 35px;
+        font-size: 32px;
     }
 
+    /* Pindahkan tombol 'X' ke pojok kanan atas biar gak ketutup */
     .close-btn {
         top: 15px;
-        left: 20px;
-        font-size: 35px;
+        right: 20px;
+        left: auto;
+        font-size: 40px;
     }
 
+    /* Perkecil gap slider dari 150px jadi 10px biar gak jebol layar */
     .slider-container {
-        gap: 10px; /* Mengecilkan jarak tombol panah slider */
+        gap: 10px !important;
+        width: 100%;
     }
 
     .prev, .next {
         font-size: 30px;
     }
 
-    .slide-active img {
-        height: 200px; /* Menyesuaikan tinggi gambar slider di HP */
+    .slide-active {
+        width: 100%;
     }
 
+    .slide-active img {
+        height: 220px; /* Sesuaikan tinggi gambar slider */
+        width: 100%;
+    }
+
+    /* Box Keterangan Project */
     .project-info-box {
         width: 100%;
+        max-width: 100%;
         padding: 15px;
         margin-top: 10px;
+        margin-bottom: 20px;
     }
-}
+
+    .project-info-box h3 {
+        font-size: 20px;
+    }
+
+    .project-info-box p#projectDesc {
+        font-size: 13px;
+    }
+}git
