@@ -429,27 +429,29 @@ html {
     cursor: pointer;
 }
 
-/* --- SLIDER STYLING --- */
+/* --- SLIDER STYLING (FIX UTUH) --- */
 .slider-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 150px;
-    position: relative;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slide-active {
+    width: 100%;
+    max-width: 500px; /* Batasi lebar gambar agar tidak melebar berlebihan */
+    display: flex;
+    justify-content: center;
 }
 
 .slide-active img {
-    width: 100%;             /* Lebar selalu pas dengan kotak container-nya */
+    width: 100% !important;
+    height: auto !important;        /* LEPAS paksaan tinggi 300px */
+    max-height: 300px !important;    /* Batas tinggi maksimal di PC */
+    object-fit: contain !important;  /* PAKSA gambar tampil utuh 100% */
     
-    /* 1. KUNCI TINGGINYA DI SINI */
-    height: 300px;           /* Semua foto akan dipaksa punya tinggi 350px. Bisa lu naikin ke 400px kalau kurang tinggi */
-    
-    /* 2. POTONG RAPI TANPA GEPENG */
-    object-fit: cover;       /* Gambar akan otomatis nge-crop area berlebih biar ukurannya pas tanpa merusak proporsi */
-    object-position: center; /* Titik fokus cropping ada di tengah foto */
-    
-    border-radius: 20px;
-    border: 5px solid white;
 }
 
 .prev, .next {
@@ -658,6 +660,25 @@ html {
     border-radius: 12px;
     border: 3px solid white;
 }
+.slider-container {
+        gap: 10px !important;
+    }
+
+    .slide-active {
+        max-width: 100% !important;
+    }
+
+    .slide-active img {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 220px !important;   /* Menyesuaikan tinggi layar HP */
+        object-fit: contain !important;
+        border: 3px solid white;
+    }
+
+    .prev, .next {
+        font-size: 30px !important;
+    }
 
     /* Box Keterangan Project */
     .project-info-box {
