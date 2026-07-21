@@ -522,6 +522,12 @@ html {
 
 @media (max-width: 768px) {
 
+    .project-grid {
+        flex-direction: column;  /* Bikin kartu numpuk ke bawah */
+        align-items: center;     /* Bikin kartu ukuran 280px tetep pas di tengah layar HP */
+        gap: 20px;               /* Jarak antar kartu */
+    }
+
     /* --- 1. HEADER & NAVBAR --- */
     header {
         flex-direction: column; /* Susun logo dan navbar vertikal */
