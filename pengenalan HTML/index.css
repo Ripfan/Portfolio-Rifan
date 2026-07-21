@@ -1,0 +1,517 @@
+/* --- RESET DASAR --- */
+/* Menghilangkan margin dan padding bawaan browser agar lebih rapi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- PENGATURAN BODY (Latar Belakang Utama) --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Membuat latar belakang gradasi dari biru ke toska terang */
+    background: linear-gradient(to right, #3b71e8, #5ed6d3);
+    color: white; /* Mengubah warna standar teks menjadi putih */
+    min-height: 100vh; /* Tinggi body memenuhi 100% tinggi layar */
+    
+    /* Menggunakan Flexbox untuk menyusun header dan main secara vertikal */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- BAGIAN HEADER (Navigasi Atas) --- */
+header {
+    display: flex;
+    justify-content: space-between; /* Mendorong logo ke kiri, menu ke kanan */
+    align-items: center; /* Memastikan elemen sejajar di tengah secara vertikal */
+    padding: 40px 80px; /* Jarak ruang di bagian atas/bawah dan kiri/kanan */
+    position: fixed;     /* Membuat header melayang dan menempel di layar */
+    top: 0;              /* Menempel pas di bagian paling atas */
+    left: 0;
+    width: 100%;         /* Memastikan lebarnya penuh dari kiri ke kanan */
+    z-index: 9999;
+    padding: 20px 80px;
+}
+
+html {
+    scroll-behavior: smooth; /* Ini yang bikin efek meluncurnya mulus */
+}
+/* Area Kiri: Logo dan Teks */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Jarak antara lingkaran dan teks */
+}
+
+.circle-logo {
+    width: 45px;
+    height: 45px;
+    border: 2px solid white; /* Garis pinggir putih */
+    border-radius: 50%; /* Membuat kotak menjadi lingkaran sempurna */
+}
+
+.text-logo .name {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.text-logo .role {
+    font-size: 13px;
+    font-weight: 300;
+    opacity: 0.8; /* Membuat teks sedikit transparan */
+}
+
+/* Area Kanan: Menu Navigasi berbentuk Kapsul */
+.navbar {
+    background-color: white;
+    padding: 12px 50px;
+    border-radius: 30px; /* Membuat sudut membulat seperti kapsul */
+    display: flex;
+    gap: 40px; /* Jarak antar link menu */
+}
+
+.navbar a {
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: #5d8ff1; /* Warna biru pada teks menu */
+    font-weight: 700;
+    font-size: 15px;
+}
+
+/* --- BAGIAN KONTEN UTAMA (Tengah) --- */
+.hero-section {
+    width: 100%; /* Pastikan mengisi penuh dari kiri ke kanan */
+    min-height: 100vh; /* Memenuhi tinggi layar penuh */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    /* UBAH BARIS INI: Kurangi angkanya agar teks tidak terlalu terdorong ke bawah */
+    padding-top: 60px;
+}
+
+/* Tulisan "PORTFOLIO" yang besar */
+.hero-section h1 {
+    font-family: 'Bebas Neue', sans-serif; /* Font tegas dan tinggi */
+    font-size: 250px;
+    letter-spacing: 5px; /* Jarak antar huruf */
+    line-height: 1; /* Mengatur tinggi baris agar tidak terlalu jauh */
+}
+
+/* Tulisan Nama di bawah "PORTFOLIO" */
+.hero-section h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    letter-spacing: 8px; /* Jarak antar huruf diperlebar agar elegan */
+    margin-bottom: 50px; /* Jarak ruang dengan tombol di bawahnya */
+}
+
+/* Tombol "Profil" */
+.btn-profil {
+    background-color: white;
+    color: #4076e0;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 15px 70px; /* Ukuran dalam tombol (atas-bawah, kiri-kanan) */
+    border-radius: 50px; /* Membuat bentuk kapsul */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sedikit bayangan lembut agar tombol menonjol */
+    transition: transform 0.2s; /* Animasi saat diklik/disentuh */
+}
+
+/* Efek saat mouse mengambang di atas tombol */
+.btn-profil:hover {
+    transform: scale(1.05); /* Membesar sedikit */
+    background-color: #5ed6d3; /* Mengubah latar belakang menjadi toska terang */
+    color: white; /* Mengubah warna teks menjadi putih */
+    transform: scale(1.05); /* Membesar sedikit (sudah ada di kode sebelumnya) */
+}
+
+/* Pengaturan dasar teks menu */
+.navbar a {
+    text-decoration: none; 
+    color: #4076e0; 
+    font-weight: 700;
+    font-size: 15px;
+    
+    /* TAMBAHKAN BARIS INI: Agar perubahan gayanya halus (animasi 0.3 detik) */
+    transition: all 0.3s ease; 
+}
+
+/* TAMBAHKAN BLOK INI: Efek saat kursor menyentuh teks menu (Hover) */
+.navbar a:hover {
+    color: #5ed6d3; /* Warna teks berubah menjadi toska terang */
+    transform: scale(1.1); /* Teks akan sedikit melompat ke atas */
+}
+
+.profil-section {
+    width: 100%; /* TAMBAHKAN BARIS INI */
+    min-height: 100vh;
+    padding: 0px 80px 80px 80px; 
+    margin-top: 150px;
+    display: flex;
+    justify-content: center; /* Memastikan kotak profil berada di tengah */
+    padding-top: 90px;
+}
+
+/* Kotak Putih Tempat Konten */
+.profil-card {
+    background-color: white;
+    color: black;
+    border-radius: 30px; 
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 1100px; /* Membatasi lebar maksimal kotak putih */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tulisan "Profil" di dalam kotak */
+.title-profil-card {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+    color: #5e84d6; /* Warna toska, bisa diganti ke #4076e0 jika ingin biru */
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+/* Wadah untuk mensejajarkan gambar (kiri) dan teks (kanan) */
+.profil-content {
+    display: flex;
+    align-items: center; /* Membuat gambar dan teks sejajar di tengah secara vertikal */
+    gap: 40px; /* Jarak antara gambar dan teks */
+    margin-bottom: 50px; /* Jarak menuju area kontak di bawahnya */
+}
+
+/* Foto Profil di dalam Kotak */
+.profil-img-large {
+    width: 250px; /* Dibuat sedikit lebih besar agar seimbang */
+    height: 250px;
+    border-radius: 50%; 
+    background-color: #4795ee; 
+    object-fit: contain;
+    flex-shrink: 0; /* Mencegah lingkaran menjadi gepeng saat teksnya panjang */
+    object-position: center 0%;
+}
+
+/* Teks Deskripsi */
+.profil-desc {
+    text-align: justify; /* Teks rata kiri-kanan agar rapi seperti di koran */
+    font-size: 15px;
+    line-height: 1.8; 
+    font-weight: 500;
+}
+
+/* Area Kontak di bawah */
+.contact-info {
+    display: flex;
+    justify-content: space-around; /* Menyebarkan icon secara merata dari kiri ke kanan */
+    flex-wrap: wrap; 
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.contact-item i {
+    font-size: 26px;
+}
+
+/* --- BAGIAN SOFTWARE SKILLS --- */
+.skills-section {
+    width: 100%;
+    padding: 80px 80px 80px 80px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    scroll-margin-top: -36px;
+}
+
+.title-skills {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+/* Mengatur layout menjadi kotak 2x2 */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Kolom */
+    gap: 15px; /* Jarak antar kotak */
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Desain Kotak Putih */
+.skill-card {
+    background-color: white;
+    border-radius: 40px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+}
+
+.skill-name {
+    color: #4076e0;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.skill-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* --- EFEK HOVER & PROGRESS BAR --- */
+
+/* Membungkus progress bar agar rapi */
+.progress-wrapper {
+    width: 80%;
+    margin-top: 20px;
+    opacity: 0; /* Awalnya tidak terlihat */
+    visibility: hidden;
+    transform: translateY(10px); /* Posisinya agak turun sedikit */
+    transition: all 0.3s ease; /* Animasi halus */
+}
+
+/* KETIKA KOTAK DISENTUH KURSOR (HOVER) */
+.skill-card:hover {
+    transform: translateY(-5px); /* Kotaknya sedikit terangkat ke atas */
+}
+
+.skill-card:hover .progress-wrapper {
+    opacity: 1; /* Progress bar muncul */
+    visibility: visible;
+    transform: translateY(0); /* Progress bar naik ke posisi asli */
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(0.9); /* Logonya sedikit mengecil untuk memberi ruang */
+}
+
+/* Desain Cangkang Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 25px;
+    border: 3px solid #4076e0; /* Garis tepi biru */
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+}
+
+/* Desain Isi (Persentase) Progress Bar */
+.progress-fill {
+    height: 100%;
+    background-color: #4076e0;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px; /* Membuat ujung isinya ikut melengkung */
+}
+
+/* Mengatur kepenuhan (width) masing-masing bar sesuai gambar */
+.canva-fill { width: 85%; }
+.corel-fill { width: 70%; }
+.ps-fill { width: 60%; }
+.figma-fill { width: 40%; }
+
+/* --- SECTION PROJECT --- */
+.project-section {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-margin-top: 30px;
+}
+
+.title-project {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 80px;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin-bottom: 10px;
+}
+
+.project-card {
+    background: white;
+    width: 280px;
+    height: 220px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background: #f0f0f0;
+}
+
+.project-card i {
+    font-size: 60px;
+    color: #4076e0;
+    margin-bottom: 15px;
+}
+
+.project-card span {
+    color: #4076e0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+}
+
+/* --- MODAL STYLING --- */
+.modal {
+    display: none; /* Sembunyi secara default */
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(49, 69, 78, 0.75); 
+    backdrop-filter: blur(10px);
+}
+
+.modal-content {
+    margin: 5% auto;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.modal-content h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: white;
+    font-size: 60px;
+    margin-bottom: 0px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+/* --- SLIDER STYLING --- */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    position: relative;
+}
+
+.slide-active img {
+    width: 100%;             /* Lebar selalu pas dengan kotak container-nya */
+    
+    /* 1. KUNCI TINGGINYA DI SINI */
+    height: 300px;           /* Semua foto akan dipaksa punya tinggi 350px. Bisa lu naikin ke 400px kalau kurang tinggi */
+    
+    /* 2. POTONG RAPI TANPA GEPENG */
+    object-fit: cover;       /* Gambar akan otomatis nge-crop area berlebih biar ukurannya pas tanpa merusak proporsi */
+    object-position: center; /* Titik fokus cropping ada di tengah foto */
+    
+    border-radius: 20px;
+    border: 5px solid white;
+}
+
+.prev, .next {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover { color: #4076e0; }
+
+/* --- WADAH KOTAK BIRU --- */
+.project-info-box {
+    background: #4076e0; /* Sesuaikan dengan biru pilihanmu */
+    color: white;
+    
+    /* 1. ATUR LEBAR AGAR PAS DENGAN GAMBAR */
+    width: 90%; 
+    max-width: 750px; /* Bikin lebih lebar dari sebelumnya */
+    margin: -20px auto 0 auto; /* Tarik ke atas dikit, dan posisikan di tengah layar */
+    
+    /* 2. ATUR RUANG DALAM (PADDING) */
+    padding: 20px 10px; /* Kanan-kiri dibikin agak lega biar teksnya rapi */
+    box-sizing: border-box; /* Biar padding nggak bikin kotak makin melar */
+    
+    border-radius: 20px;
+    border: 3px solid white;
+    text-align: center; /* Judul dan deskripsi otomatis rata tengah */
+    position: relative;
+    z-index: 2;
+    margin-bottom: 80px; /* Jarak ke bawah biar nggak nempel ke tombol navigasi */
+    margin-top: -17px; /* Jarak ke atas biar nggak nempel ke gambar */
+}
+
+.project-info-box h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 28px;
+    margin-bottom: 7px;
+}
+
+.project-info-box p#projectDesc {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 7px; /* Jarak antara deskripsi dan bagian Role/Tools */
+}
+
+/* --- BAGIAN ROLE & TOOLS --- */
+.project-meta {
+    display: flex;
+    flex-direction: column; /* Bikin Role dan Tools numpuk ke bawah (vertikal) */
+    align-items: flex-start; /* Tarik posisinya jadi rata kiri */
+    gap: 6px; /* Jarak atas-bawah antara Role dan Tools */
+    text-align: left;
+}
+
+/* Reset gaya teks Role & Tools biar rapi seperti di gambar */
+.project-meta p {
+    font-size: 14px;
+    margin: 0;
+    background: none; /* Menghilangkan efek kapsul kalau sebelumnya kamu pakai */
+    border: none;
+    padding: 0;
+}

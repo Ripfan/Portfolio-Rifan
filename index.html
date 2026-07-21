@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Rifan Ahmad Alfarobi</title>
+    
+    <link rel="stylesheet" href="pengenalan HTML/index.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <img src="pengenalan HTML/ripfan.png" alt="Logo" class="circle-logo">
+                <h3 class="name">Rifan Ahmad Alfarobi</h3>
+                <p class="role">|</p>
+                <p class="role">Graphic Designer</p>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#profil">Profil</a>
+            <a href="#skills">Skills</a>
+            <a href="#project">Project</a>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <h1>PORTFOLIO</h1>
+        <h2>RIFAN AHMAD ALFAROBI</h2>
+        
+        <a href="#profil" class="btn-profil">Profil</a>
+    </main>
+
+    <section id="profil" class="profil-section">
+        
+        <div class="profil-card">
+            
+            <h1 class="title-profil-card">Profil</h1>
+            
+            <div class="profil-content">
+                <img src="pengenalan HTML/ripfan.png" alt="Rifan" class="profil-img-large">
+                
+                <p class="profil-desc">
+                    Hello, I'm Rifan Ahmad Alfarobi, a passionate graphic designer with experience in creating various types of visual designs, including posters, social media content, and promotional graphics. I enjoy transforming ideas into visually appealing and meaningful designs through effective visual communication. As a fast learner and detail-oriented individual, I am always eager to improve my creative and technical skills while keeping up with the latest design trends. I am committed to delivering high-quality work and collaborating with others to create impactful and innovative design solutions.
+                </p>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>rifan_alfarobi</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>rifanahmad.a57@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>Rifan Ahmad Alfarobi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <h2 class="title-skills">Software Skills</h2>
+        
+        <div class="skills-grid">
+            
+            <div class="skill-card">
+                <h3 class="skill-name">Canva</h3>
+                <img src="pengenalan HTML/canvaaa.png" alt="Canva" class="skill-icon">
+                
+                <div class="progress-wrapper">
+                    <div class="progress-bar">
+                        <div class="progress-fill canva-fill">85%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="skill-name">Coreldraw</h3>
+                <img src="pengenalan HTML/coreellll-removebg-preview.png" alt="Coreldraw" class="skill-icon">
+                <div class="progress-wrapper">
+                    <div class="progress-bar">
+                        <div class="progress-fill corel-fill">70%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="skill-name">Adobe Photoshop</h3>
+                <img src="pengenalan HTML/ps-removebg-preview.png" alt="Photoshop" class="skill-icon">
+                <div class="progress-wrapper">
+                    <div class="progress-bar">
+                        <div class="progress-fill ps-fill">60%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="skill-name">Figma</h3>
+                <img src="pengenalan HTML/figmaaa-removebg-preview.png" alt="Figma" class="skill-icon">
+                <div class="progress-wrapper">
+                    <div class="progress-bar">
+                        <div class="progress-fill figma-fill">40%</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+<section id="project" class="project-section">
+    <h1 class="title-project">Project</h1>
+
+    <div class="project-grid">
+        <div class="project-grid">
+        <div class="project-card" onclick="openModal('logo')">
+             <i class="fa-solid fa-pen-nib"></i>
+             <span>Logo Design</span>
+    </div>
+        </div>
+        <div class="project-card" onclick="openModal('social')">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Social Media Post</span>
+        </div>
+        <div class="project-card" onclick="openModal('poster')">
+            <i class="fa-solid fa-file-lines"></i>
+            <span>Poster</span>
+        </div>
+        <div class="project-card" onclick="openModal('print')">
+            <i class="fa-solid fa-pen-ruler"></i>
+            <span>Print Design</span>
+        </div>
+        <div class="project-card" onclick="openModal('web')">
+            <i class="fa-solid fa-window-maximize"></i>
+            <span>Web Design</span>
+        </div>
+    </div>
+</section>
+
+<div id="projectModal" class="modal">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    
+    <div class="modal-content">
+        <h2 id="modalTitle">Category Name</h2>
+        
+        <div class="slider-container">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            
+            <div class="slide-active">
+                <img id="sliderImage" src="" alt="Project Image">
+            </div>
+
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+
+        <div class="project-info-box">
+            <h3 id="projectSubtitle">Project Title</h3>
+            <p id="projectDesc">Description goes here...</p>
+            <div class="project-meta">
+                <p><strong>Role:</strong> <span id="projectRole">Graphic Designer</span></p>
+                <p><strong>Tools:</strong> <span id="projectTools">CorelDRAW</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // DATA PROJECT LENGKAP (Tinggal kamu ganti nama file gambarnya nanti)
+    const projectData = {
+        logo: {
+            title: "Logo Design",
+            items: [
+                {
+                    img: "pengenalan HTML/65c776c1-166b-401f-be01-d2d8b76c4100-1.jpg", // Ganti dengan file gambarmu nanti
+                    subtitle: "Logo Design - Angkatan Pondok Pesantren",
+                    desc: "Merancang identitas visual untuk angkatan santri yang merepresentasikan nilai Islami, semangat menuntut ilmu, dan identitas santri.",
+                    role: "Graphic Designer",
+                    tools: "CorelDRAW"
+                }
+            ]
+        },
+        social: {
+            title: "Social Media Post",
+            items: [
+                {
+                    img: "pengenalan HTML/organigram sd (2).png", 
+                    subtitle: "Instagram Feed - SD IT Al-Furqon",
+                    desc: "Membuat konten pengenalan guru dan staff SD IT Al-Furqon melalui Organigram.",
+                    role: "Graphic Designer",
+                    tools: "Canva"
+                },
+                {
+                    img: "pengenalan HTML/FMI KONSEP(9).png",
+                    subtitle: "Instagram Feed - FMI FMIPA UNNES",
+                    desc: "Membuat konten feeds pada Instagram FMI UNNES.",
+                    role: "Graphic Designer",
+                    tools: "Canva"
+                }
+            ]
+        },
+        poster: {
+            title: "Poster Design",
+            items: [
+                {
+                    img: "pengenalan HTML/doom scrl peenge jepege.jpg", 
+                    desc: "Membuat poster untuk keperluan lomba, dengan fokus pada desain visual yang menarik dan informatif.",
+                    subtitle: "Poster Lomba Doom Scroll",
+                    role: "Graphic Designer",
+                    tools: "Photoshop"
+                },
+                {
+                    img: "pengenalan HTML/RIfan Ahmad Alfarobi_Book and Literacy.png", 
+                    desc: "Membuat poster untuk keperluan lomba, dengan fokus pada desain visual yang menarik dan informatif.",
+                    subtitle: "Poster Lomba Book and Literacy",
+                    role: "Graphic Designer",
+                    tools: "Photoshop"
+                },
+                {
+                    img: "pengenalan HTML/Trilogi Trikoda IMM sebagai Fondasi Kader dalam Menjawab Tantangan Zaman(3).png", 
+                    desc: "Membuat poster untuk keperluan ajakan diskusi pada organisasi IMM",
+                    subtitle: "Poster Acara Diskusi",
+                    role: "Graphic Designer",
+                    tools: "Canva"
+                },
+                {
+                    img: "pengenalan HTML/Uji kadar CO, CO2 dan HC.png", 
+                    desc: "Membuat Infografis dengan tema Penerapan Pancasila dibidang saintek.",
+                    subtitle: "Poster Pendidikan",
+                    role: "Graphic Designer",
+                    tools: "Canva"
+                },
+                {
+                    img: "pengenalan HTML/Add a heading(2).png", 
+                    desc: "Membuat infografis dengan tema lingkungan.",
+                    subtitle: "Poster Lomba desain grafis",
+                    role: "Graphic Designer",
+                    tools: "Canva"
+                }
+            ]
+        },
+        print: {
+            title: "Print Design",
+            items: [
+                {
+                    img: "pengenalan HTML/Lanyard FP (1).png", 
+                    subtitle: "Desain ID Card & Lanyard",
+                    desc: "Membuat desain ID Card dan Lanyard untuk keperluan identifikasi anggota pada Internship BEM FMIPA UNNES.",
+                    role: "Graphic Designer",
+                    tools: "Canva"
+                },
+                {
+                    img: "pengenalan HTML/kaos ado.png", 
+                    subtitle: "Desain Merchandise Kaos (Personal Project)",
+                    desc: "Merancang desain kaos bertema anime dengan menggabungkan ilustrasi karakter bergaya chibi dan tipografi yang kuat.",
+                    role: "Graphic Designer",
+                    tools: "CorelDRAW"
+                }
+            ]
+        },
+        web: {
+            title: "Web Design",
+            items: [
+                {
+                    img: "pengenalan HTML/Desktop - 1.png", 
+                    subtitle: "Landing Page Portofolio",
+                    desc: "Merancang tampilan antarmuka (UI) website portfolio yang responsif dan menarik.",
+                    role: "UI/UX Designer",
+                    tools: "Figma"
+                }
+            ]
+        }
+    };
+
+    let currentCategory = "";
+    let currentIndex = 0;
+
+    function openModal(cat) {
+        // Cek apakah datanya ada
+        if (!projectData[cat]) {
+            alert("Data untuk kategori ini belum dibuat!");
+            return;
+        }
+        
+        currentCategory = cat;
+        currentIndex = 0;
+        updateModalContent();
+        document.getElementById("projectModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("projectModal").style.display = "none";
+    }
+
+    function changeSlide(direction) {
+        const categoryItems = projectData[currentCategory].items;
+        currentIndex += direction;
+
+        if (currentIndex >= categoryItems.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = categoryItems.length - 1;
+
+        updateModalContent();
+    }
+
+    function updateModalContent() {
+        const data = projectData[currentCategory];
+        const item = data.items[currentIndex];
+
+        document.getElementById("modalTitle").innerText = data.title;
+        document.getElementById("sliderImage").src = item.img;
+        document.getElementById("projectSubtitle").innerText = item.subtitle;
+        document.getElementById("projectDesc").innerText = item.desc;
+        document.getElementById("projectRole").innerText = item.role;
+        document.getElementById("projectTools").innerText = item.tools;
+    }
+
+    // Tutup modal kalau klik di luar area kotak konten
+    window.onclick = function(event) {
+        let modal = document.getElementById("projectModal");
+        if (event.target == modal) {
+            closeModal();
+        }
+    }
+</script>
+</body>
+</html>
